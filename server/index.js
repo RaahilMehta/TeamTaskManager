@@ -13,6 +13,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
+app.get('/', (req, res) => {
+  res.send('Backend is running ');
+});
 
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
