@@ -11,16 +11,15 @@ const app = express();
 
 app.use(cors({
   origin: function(origin, callback) {
-    const allowedOrigins = [
-      'https://teamtaskmanager-production-b0eb.up.railway.app',
-      'https://teamtaskmanager-production-d9d5.up.railway.app'
-    ];
+    if (!origin) return callback(null, true);
 
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
+    if (
+      origin.includes('railway.app')
+    ) {
+      return callback(null, true);
     }
+
+    callback(new Error('Not allowed by CORS'));
   },
   credentials: true
 }));
