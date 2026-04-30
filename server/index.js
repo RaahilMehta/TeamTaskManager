@@ -9,20 +9,27 @@ const taskRoutes = require('./routes/tasks');
 
 const app = express();
 
-app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin) return callback(null, true);
+const allowedOrigins = [
+  'https://teamtaskmanager-production-b0eb.up.railway.app',
+  'https://teamtaskmanager-production-f0d0.up.railway.app'
+];
 
-    if (
-      origin.includes('railway.app')
-    ) {
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true); // allow server tools / Postman
+
+    if (allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
 
-    callback(new Error('Not allowed by CORS'));
+    return callback(null, true); // TEMP: allow all to debug
   },
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }));
+
+// VERY IMPORTANT (fix preflight)
+app.options('*', cors());
 app.use(express.json());
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
