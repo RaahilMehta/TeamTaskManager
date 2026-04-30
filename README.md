@@ -17,15 +17,23 @@ team-task-manager/
 👉 https://github.com/YOUR_USERNAME/TeamTaskManager
 
 Features
+
 🔐 Authentication
+
 Signup / Login with JWT
+
 Secure password hashing (bcrypt)
+
 Protected routes
+
 👥 Role-Based Access Control
 Admin
+
 Create & delete projects
+
 Add/remove members
 Create & manage tasks
+
 Member
 View assigned projects
 Update task status
