@@ -9,7 +9,14 @@ const taskRoutes = require('./routes/tasks');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://teamtaskmanager-production-b0eb.up.railway.app',
+    'https://teamtaskmanager-production-d9d5.up.railway.app'
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get('/api/health', (_req, res) => res.json({ status: 'ok' }));
