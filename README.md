@@ -8,7 +8,40 @@ team-task-manager/
 ├── client/   # React frontend (Vite + Tailwind)
 └── server/   # Node.js backend (Express + Mongoose + JWT)
 ```
+🔗 Live Demo
 
+👉 https://teamtaskmanager-production-b0eb.up.railway.app
+
+📦 GitHub Repository
+
+👉 https://github.com/YOUR_USERNAME/TeamTaskManager
+
+Features
+🔐 Authentication
+Signup / Login with JWT
+Secure password hashing (bcrypt)
+Protected routes
+👥 Role-Based Access Control
+Admin
+Create & delete projects
+Add/remove members
+Create & manage tasks
+Member
+View assigned projects
+Update task status
+📁 Project Management
+Create multiple projects
+Add team members to projects
+Manage project-level access
+✅ Task Management
+Create and assign tasks
+Status tracking (Todo / In Progress / Done)
+Due date support
+Overdue tracking
+📊 Dashboard
+Tasks assigned to user
+Tasks by status
+Overdue tasks
 ---
 
 ## Prerequisites
