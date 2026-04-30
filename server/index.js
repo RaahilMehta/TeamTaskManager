@@ -14,19 +14,7 @@ const allowedOrigins = [
   'https://teamtaskmanager-production-f0d0.up.railway.app'
 ];
 
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin) return callback(null, true); // allow server tools / Postman
-
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-
-    return callback(null, true); // TEMP: allow all to debug
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  credentials: true
-}));
+app.use(cors());
 
 // VERY IMPORTANT (fix preflight)
 app.options('*', cors());
