@@ -9,13 +9,13 @@ const taskRoutes = require('./routes/tasks');
 
 const app = express();
 
-const allowedOrigins = [
-  'https://teamtaskmanager-production-b0eb.up.railway.app',
-  'https://teamtaskmanager-production-d9d5.up.railway.app'
-];
-
 app.use(cors({
   origin: function(origin, callback) {
+    const allowedOrigins = [
+      'https://teamtaskmanager-production-b0eb.up.railway.app',
+      'https://teamtaskmanager-production-d9d5.up.railway.app'
+    ];
+
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
