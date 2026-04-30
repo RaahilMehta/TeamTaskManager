@@ -35,21 +35,37 @@ Add/remove members
 Create & manage tasks
 
 Member
+
 View assigned projects
+
 Update task status
+
 📁 Project Management
+
 Create multiple projects
+
 Add team members to projects
+
 Manage project-level access
+
 ✅ Task Management
+
 Create and assign tasks
+
 Status tracking (Todo / In Progress / Done)
+
 Due date support
+
 Overdue tracking
+
 📊 Dashboard
+
 Tasks assigned to user
+
 Tasks by status
+
 Overdue tasks
+
 ---
 
 ## Prerequisites
